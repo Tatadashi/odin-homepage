@@ -3,19 +3,21 @@
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
+#top-background-wrapper {
+  filter: drop-shadow(3px 3px 3px gray);
+  z-index: -1;
+}
+
 #top-background {
   background-color: darkcyan;
-  clip-path: polygon(100% 0%,
-                   100% 60%,
-                   0% 100%,
-                    0% 0%);
-  height: 400px;
+  clip-path: polygon(100% 0%, 100% 60%, 0% 100%, 0% 0%);
+  height: 520px;
   width: 100%;
   position: absolute;
 }
@@ -27,6 +29,7 @@ body {
 }
 
 #profile {
+  box-shadow: 3px 3px 3px gray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +37,7 @@ body {
 }
 
 #profile-picture {
-  max-width: 300px;
+  max-width: 500px;
 }
 
 #profile-name {
@@ -49,16 +52,104 @@ body {
 
 #about-me {
   background-color: aliceblue;
+  box-shadow: 3px 3px 3px gray;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 60px;
   position: relative;
   margin-block: 20px;
 }
 
 #about-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+#about-links a {
+  min-width: 30px;
+}
+
+#work-section {
+  background-color: aliceblue;
+  margin: 30px;
+}
+
+#projects-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#project-1 {
+  background-color: brown;
+}
+
+#project-2 {
+  background-color: blueviolet;
+}
+
+#project-3 {
+  background-color: darkolivegreen;
+}
+
+#project-4 {
+  background-color: darkorchid;
+}
+
+#project-5 {
+  background-color: darkorange;
+}
+
+#project-6 {
+  background-color: cornflowerblue;
+}
+
+.project {
+  box-shadow: 3px 3px 3px gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.project-image {
+  max-height: 250px;
+  min-height: 250px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.project-description {
+  background-color: aliceblue;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.project-identifier {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 0;
+  gap: 5px;
+}
+
+.project-links a {
+  min-width: 20px;
 }
