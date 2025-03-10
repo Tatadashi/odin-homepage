@@ -44,6 +44,7 @@ body {
   background: rgb(82, 122, 122, 0.5);
   color: white;
   font-family: "Playfair Display", serif;
+  font-size: 50px;
   font-weight: 700;
   position: absolute;
   /*broken when phone screen*/
@@ -152,4 +153,51 @@ body {
 
 .project-links a {
   min-width: 20px;
+}
+
+#contact-section {
+  background-color: darkcyan;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+}
+
+#contact-info {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 350px;
+}
+
+#contact-info img:not(#contact-links img) {
+  filter: invert(1);
+}
+
+#phone-email img {
+  max-height: 2em;
+}
+
+#phone,
+#email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+#contact-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#contact-links a {
+  min-width: 35px;
+}
+
+#contact-image {
+  max-width: 700px;
 }
