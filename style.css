@@ -2,12 +2,14 @@
   margin: 0;
 }
 
+
 body {
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
   position: relative;
 }
+
 
 #top-background-wrapper {
   filter: drop-shadow(3px 3px 3px gray);
@@ -46,8 +48,8 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 50px;
   font-weight: 700;
+  height: 1.5em;
   position: absolute;
-  /*broken when phone screen*/
   bottom: 0;
 }
 
@@ -66,7 +68,7 @@ body {
 #about-links {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -82,11 +84,10 @@ body {
 }
 
 #projects-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
 #project-1 {
@@ -118,8 +119,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
-  min-width: 300px;
 }
 
 .project-image {
@@ -133,6 +132,7 @@ body {
   background-color: aliceblue;
   max-height: 100px;
   min-height: 100px;
+  width: 95%;
   padding: 10px;
 }
 
@@ -148,7 +148,7 @@ body {
   flex-direction: row;
   position: absolute;
   right: 0;
-  gap: 5px;
+  gap: 10px;
 }
 
 .project-links a {
@@ -157,10 +157,9 @@ body {
 
 #contact-section {
   background-color: darkcyan;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 30px;
   padding: 30px;
 }
 
@@ -169,7 +168,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: 350px;
 }
 
 #contact-info img:not(#contact-links img) {
@@ -199,5 +197,108 @@ body {
 }
 
 #contact-image {
-  max-width: 700px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1000px) {
+  #top-section {
+    display: block;
+    margin-left: 110px;
+  }
+
+  #profile {
+    float: left;
+    margin-right: 20px;
+    margin-left: -80px;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+
+  #profile-picture {
+    height: 250px;
+  }
+
+  #profile-name {
+    transform: translate(90%);
+    top: 0;
+  }
+
+  #about-me {
+    margin-top: 80px;
+    display: block;
+  }
+
+  #about-me h1 {
+    margin-bottom: 20px;
+  }
+
+  #about-me p {
+    font-size: x-large;
+    margin-bottom: 30px;
+  }
+
+  #projects-section {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  #phone,
+  #email {
+    gap: 10px;
+  }
+  
+  #about-links,
+  .project-links {
+    gap: 20px;
+  }
+
+  #contact-section {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+
+  #contact-info h3 {
+    font-size: medium;
+  }
+
+  #contact-image {
+    object-position: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  #top-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+
+  #projects-section {
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+  }
+
+  #profile {
+    margin: 0;
+  }
+
+  #profile-picture {
+    height: 50vh;
+    max-width: 85vw;
+    object-position: 0%;
+    object-fit: cover;
+  }
+
+  #profile-name {
+    top: 43vh;
+    transform: translate(0%);
+  }
+
+  #contact-section {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 }
