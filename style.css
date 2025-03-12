@@ -172,6 +172,11 @@ body {
   gap: 30px;
 }
 
+#contact-info p {
+  font-weight: bold;
+  font-size: large;
+}
+
 #contact-info img:not(#contact-links img) {
   filter: invert(1);
 }
@@ -258,6 +263,10 @@ body {
   #contact-section {
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
+  }
+
+  #contact-info p {
+    font-size: medium;
   }
 
   #contact-info h3 {
