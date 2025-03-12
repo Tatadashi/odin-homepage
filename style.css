@@ -15,7 +15,7 @@ body {
 }
 
 #top-background {
-  background-color: darkcyan;
+  background-color: #007575;
   clip-path: polygon(100% 0%, 100% 60%, 0% 100%, 0% 0%);
   height: 520px;
   width: 100%;
@@ -109,11 +109,11 @@ body {
 }
 
 #project-5 {
-  background-color: #D13800;
+  background-color: #d13800;
 }
 
 #project-6 {
-  background-color: #286BE6;
+  background-color: #286be6;
 }
 
 .project {
@@ -158,7 +158,7 @@ body {
 }
 
 #contact-section {
-  background-color: darkcyan;
+  background-color: #007575;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 30px;
