@@ -2,14 +2,12 @@
   margin: 0;
 }
 
-
 body {
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-
 
 #top-background-wrapper {
   filter: drop-shadow(3px 3px 3px gray);
@@ -65,6 +63,10 @@ body {
   margin-block: 20px;
 }
 
+#about-me p {
+  font-size: x-large;
+}
+
 #about-links {
   display: flex;
   flex-direction: row;
@@ -107,11 +109,11 @@ body {
 }
 
 #project-5 {
-  background-color: darkorange;
+  background-color: #D13800;
 }
 
 #project-6 {
-  background-color: cornflowerblue;
+  background-color: #286BE6;
 }
 
 .project {
@@ -235,7 +237,6 @@ body {
   }
 
   #about-me p {
-    font-size: x-large;
     margin-bottom: 30px;
   }
 
@@ -248,7 +249,7 @@ body {
   #email {
     gap: 10px;
   }
-  
+
   #about-links,
   .project-links {
     gap: 20px;
